@@ -29,10 +29,10 @@ White='\e[0;37m'        # White
 nocol='\033[0m'         # Default
 
 # Tweakable Options Below
-export ARCH=arm
-export SUBARCH=arm
-export KBUILD_BUILD_USER="KunalKene1797"
-export KBUILD_BUILD_HOST="BlackServer"
+export ARCH=arm64
+export SUBARCH=arm64
+export KBUILD_BUILD_USER="NeoSphere"
+export KBUILD_BUILD_HOST="NeoSphere"
 export CROSS_COMPILE="/home/kunalkene1797/arm-eabi-6.0/bin/arm-eabi-"
 
 # Compilation Scripts Are Below
@@ -42,7 +42,7 @@ echo -e "$White***********************************************"
 echo "         Compiling BlackBox kernel             "
 echo -e "***********************************************$nocol"
 make clean && make mrproper
-make cyanogenmod_sprout_defconfig
+make msm8937_defconfig
 make -j4
 if ! [ -a $ZIMAGE ];
 then
